@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: black;
+}
+
+.container {
+    background: #202020;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.uno {
+    background: #F13929;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+}
+.dos {
+    background: #7250FF;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+}
+.tres {
+    background: #01D0FB;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+}
