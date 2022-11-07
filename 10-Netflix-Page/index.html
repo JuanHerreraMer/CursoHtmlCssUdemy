@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix official</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 </head>
 <body>
     <main>
@@ -19,7 +21,8 @@
                 <li><a href="#">My List</a></li>
             </ul>
             <div class="search">
-                <input type="text" placeholder="Search">                
+                <input type="text" placeholder="Search"></input>
+                <button class="btnBuscar"><span class="material-icons">search</span></button>                               
             </div>            
         </header>
         <section class="banner">
@@ -41,8 +44,23 @@
                     <a href="#">My List</a>
                 </div>
             </div>
-            <a href="#" class="play"><img src="./img/play.png" alt="play">Watch Trailer</a>
+            <a href="#" class="play" onclick="toggleVideo();"><img src="./img/play.png" alt="play">Watch Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="./img/trailer.mp4" controls="true"></video>
+            <img src="./img/close.png" alt="close" class="close"
+                onclick="toggleVideo();">
         </section>
     </main>
+    <script>
+        const toggleVideo = () => {
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("video");
+
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
 </body>
 </html>

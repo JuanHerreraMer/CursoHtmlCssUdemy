@@ -1,37 +1,41 @@
 body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-.padre {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.hijo {
-    background: #4c35aa;
-    border-radius: 15px;
-    height: 200px;
-    width: 200px;
+.container{
+    background: #48DAEE;
+    perspective: 1000px;
+    perspective-origin: 800px;
+    transform-style: preserve-3d;
 }
 
-.hijo::before {
-    background: red;
-    content: "before";
-    width: 50px;
-    height: 50px;
-    display: block;
-    border-radius: 50%;
+.box{
+    width: 200px;
+    height: 200px;
+    background: #7250FF;
+    border-radius: 15px;
+    transition: 1s;
+    /*transform: rotate3d(1,0,1,50deg); /*rotate3d(x, y, z, grados)*/
+    /*transform: translate3d(50px, 100px, 45px); eje x, y, z*/
+    transform: rotateX(50deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
 }
-.hijo::after {
-    background: white;
-    content: "after";
-    width: 50px;
-    height: 50px;
-    display: block;
-    border-radius: 50%;
+
+.front{
+    width: 100px;
+    height: 100px;
+    background: #c0e14a;
+    border-radius: 15px;
+    transform: rotateX(50deg);
+}
+
+.box:hover{
+    transform: rotate3d(1, 0, 1, 800deg)
 }
